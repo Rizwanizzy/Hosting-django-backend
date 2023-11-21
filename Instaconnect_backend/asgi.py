@@ -17,7 +17,7 @@ from post import routing as postrouting
 
 application = ProtocolTypeRouter(
     {
-        'http':django_asgi_application,
+        'https':django_asgi_application,
         'websocket':
         AllowedHostsOriginValidator(
             JWTAuthMiddlewareStack(
