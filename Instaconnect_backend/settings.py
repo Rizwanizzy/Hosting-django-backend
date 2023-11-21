@@ -198,7 +198,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL ='users.UserAccount'
 
-CORS_ALLOW_ALL_ORIGINS =True
+CORS_ALLOWED_ORIGINS = [
+    "https://www.instaconnect.online",
+    "http://www.instaconnect.online",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 
 EMAIL_BACKEND = config("EMAIL_BACKEND")
